@@ -226,6 +226,7 @@ public class APIResponse implements Serializable {
 打开链接：http://localhost:8080/webapi/swagger-ui.html
 ![1](/img/1.png)
 ### 4、注解说明
+```
 @Api()用于请求类
 	tags——类说明，可以是集合也可以是字符串
 	value——类说明，可以使用tags替代
@@ -259,3 +260,4 @@ public class APIResponse implements Serializable {
 	description——响应类描述
 @ApiModelProperty()用于响应类属性
 	value——属性描述
+```
