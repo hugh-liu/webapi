@@ -4,7 +4,7 @@
 ***
 ## 目录
 * [1、添加架包依赖](#1添加架包依赖)
-* [2、Swagger2配置类](#2Swagger配置类)
+* [2、Swagger2配置类](#2Swagger2配置类)
 * [3、创建接口测试](#3创建接口测试)
 * [4、注解说明](#4注解说明)
 
@@ -24,7 +24,7 @@
     <version>2.8.0</version>
 </dependency>
 ```
-### 2、Swagger配置类
+### 2、Swagger2配置类
 ```
 package com.hugh.api;
 
