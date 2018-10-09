@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
  * @version: 1.0 
  */
 @SuppressWarnings("serial")
-@ApiModel(description = "响应数据")
+@ApiModel(value = "响应数据value", description = "响应数据")
 public class APIResponse implements Serializable {
 	
 	@ApiModelProperty(value = "编号")

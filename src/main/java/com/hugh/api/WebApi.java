@@ -22,21 +22,63 @@ import com.hugh.api.APIResponse;
  * @version: 1.0 
  */
 @Controller
-@RequestMapping("/api")
+@RequestMapping
 @Api(tags = "测试API")
 public class WebApi {
 	
 	@ResponseBody
-	@RequestMapping(value = "test", method = RequestMethod.GET)
-	@ApiOperation(value = "测试方法test", notes = "测试方法 notes")
+	@RequestMapping(value = "testGet", method = RequestMethod.GET)
+	@ApiOperation(value = "测试方法testGet", notes = "testGet notes")
 	@ApiImplicitParams({
-		@ApiImplicitParam(paramType = "query", dataType = "String", name ="name", value = "用户名称", required = true, defaultValue = ""),
-		@ApiImplicitParam(paramType = "query", dataType = "String", name ="password", value = "用户密码", required = true, defaultValue = "")
+		@ApiImplicitParam(name ="name", value = "用户名称", paramType = "query", dataType = "String", required = true, defaultValue = ""),
+		@ApiImplicitParam(name ="password", value = "用户密码", paramType = "query", dataType = "String", required = true, defaultValue = "")
 	})
 	@ApiResponses({
 		@ApiResponse(code = 500, message = "后台异常", response = Exception.class)
 	})
-	public APIResponse test(@RequestParam String name, @RequestParam String password) throws Exception {
+	public APIResponse testGet(@RequestParam String name, @RequestParam String password) throws Exception {
+		return new APIResponse(0, "完成", null);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "testPost", method = RequestMethod.POST)
+	@ApiOperation(value = "测试方法testPost", notes = "testPost notes")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name ="name", value = "用户名称", paramType = "query", dataType = "String", required = true, defaultValue = ""),
+		@ApiImplicitParam(name ="password", value = "用户密码", paramType = "query", dataType = "String", required = true, defaultValue = "")
+	})
+	@ApiResponses({
+		@ApiResponse(code = 500, message = "后台异常", response = Exception.class)
+	})
+	public APIResponse testPost(@RequestParam String name, @RequestParam String password) throws Exception {
+		return new APIResponse(0, "完成", null);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "testDelete", method = RequestMethod.DELETE)
+	@ApiOperation(value = "测试方法testDelete", notes = "testDelete notes")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name ="name", value = "用户名称", paramType = "query", dataType = "String", required = true, defaultValue = ""),
+		@ApiImplicitParam(name ="password", value = "用户密码", paramType = "query", dataType = "String", required = true, defaultValue = "")
+	})
+	@ApiResponses({
+		@ApiResponse(code = 500, message = "后台异常", response = Exception.class)
+	})
+	public APIResponse testDelete(@RequestParam String name, @RequestParam String password) throws Exception {
+		return new APIResponse(0, "完成", null);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "testPut", method = RequestMethod.PUT)
+	@ApiOperation(value = "测试方法testPut", notes = "testPut notes")
+	@ApiImplicitParams({
+		@ApiImplicitParam(name ="name", value = "用户名称", paramType = "query", dataType = "String", required = true, defaultValue = ""),
+		@ApiImplicitParam(name ="password", value = "用户密码", paramType = "query", dataType = "String", required = true, defaultValue = "")
+	})
+	@ApiResponses({
+		@ApiResponse(code = 500, message = "后台异常", response = Exception.class)
+	})
+	public APIResponse testPut(@RequestParam String name, @RequestParam String password) throws Exception {
 		return new APIResponse(0, "完成", null);
 	}
 	
